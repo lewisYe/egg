@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .viewFramework-header {
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      background: #373d41;
+      z-index: 101;
+    }
+
+    .viewFramework-body {
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      left: 0px;
+      right: 0;
+    }
+
+    .viewFramework-sidebar {
+      width: 200px;
+      background: #373d41;
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      left: 0;
+    }
+    .viewFramework-sidebar a{
+      color: #ffffff;
+    }
+
+    .viewFramework-app {
+      position: absolute;
+      left: 200px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="/public/css/reset.css">
+</head>
+
+<body>
+  <div class="viewFramework-header"></div>
+  <div class="viewFramework-body">
+    <div class="viewFramework-sidebar">
+      <a href="/pms">pms</a>
+      <a href="/community#/baseManage/community">community</a>
+    </div>
+    <div class="viewFramework-app">
+      {% block body %}{% endblock %}
+    </div>
+  </div>
+</body>
+
+</html>
